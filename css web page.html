@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="uft-8">
+    <meta name="view-port" content="width=device-width,initial-scale=1"
+    <title>CSS web page</title>
+    <style>
+        body{
+            margin : 0;
+            padding : 0;
+            line-height:1.5em;
+        }
+        #header{
+            background-color: black;
+            font-family : Arial;
+            height : 100px;
+        }
+        #contentwrapper{
+            float: left;
+            width:100%;
+        }
+        #contentcolumn{
+            margin: 0px 230px 0px 230px;
+        }
+        #leftcolumn{
+            float : left;
+            width : 230px;
+            margin-left : -100%;
+            background-color: #24C8FF;
+        }
+        #rightcolumn{
+            float : left;
+            width : 230px;
+            margin-left : -230px;
+            background-color: #FFFB00;
+        }
+        .innertext{
+            margin : 20px;
+            font-family: Arial;
+            color : #5E5E5E;
+        }
+        #footer{
+            clear : left; /* cannot float on left */
+            background:black;
+            color:#FFF;
+            width : 100%;
+            font-family: Arial;
+            padding  :4px;
+            text-align:center;
+        }
+        /* ########## navigation bar ############## */
+        ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            background-color: #000;
+        }
+        li{
+            float:left;
+            border-right: 1px solid #bbb;
+        }
+        li:last-child{
+            border-right:none;
+        }
+        li a{
+            display : block;
+            color : white;
+            text-align:center;
+            padding : 14px 16px;
+            text-decoration : none;
+        }
+        li a:hover:not(.active){
+            background-color:#808080;
+        }
+        .active{
+            background-color:#0099ff;
+        }
+        /* ######## Responsive Layout ########### */
+
+        @media (max-width: 840px){ /* Drop right column down */
+
+            #leftcolumn{
+                margin-left:-100%;
+            }
+            #rightcolumn{
+                float : none;
+                width : 100%;
+                margin-let:0;
+                clear:both;
+            }
+            #content-column{
+                margin-right : 0; /*Set margin to left column width */
+
+            }  
+        }
+        @media (max-width: 600px){/*Drop left column dwon */
+
+            #leftcolumn{
+                float:none;
+                width:100%;
+                clear:both;
+                margin-left:0;
+            }
+            #contentcolumn{
+                margin-left:0;
+            }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <ul style: "display: inline;">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">About</a></li>
+                <li><a href="#contact">news</a></li>
+                <li><a href="#about">contact</a></li>
+            </ul>
+        </div>
+        <div id="contentwrapper">
+            <div id="contentcolumn">
+                <div id="innertext">
+                        <b> Welcome</b><br />
+                        An essay is, generally, a piece of writing that gives
+                        the author's own argument — but the definition is vague, 
+                        overlapping with those of a paper, an article, a pamphlet
+                        , and a short story. Essays have traditionally been 
+                        sub-classified as formal and informal. Formal essays are
+                        characterized by "serious purpose, dignity, logical organization,
+                        length," whereas the informal essay is characterized by
+                        "the personal element (self-revelation, individual tastes 
+                        and experiences, confidential manner), humor, graceful style,
+                        rambling structure, unconventionality or novelty of theme,"
+
+                         An essay is, generally, a piece of writing that gives
+                        the author's own argument — but the definition is vague, 
+                        overlapping with those of a paper, an article, a pamphlet
+                        , and a short story. Essays have traditionally been 
+                        sub-classified as formal and informal. Formal essays are
+                        characterized by "serious purpose, dignity, logical organization,
+                        length," whereas the informal essay is characterized by
+                        "the personal element (self-revelation, individual tastes 
+                        and experiences, confidential manner), humor, graceful style,
+                        rambling structure, unconventionality or novelty of theme,"
+                </div>
+            </div>
+        </div>
+        <div id="leftcolumn">
+            <div class="innertext">
+                    <b> Left Column:230px</b><br />
+                    An essay is, generally, a piece of writing that gives
+                    the author's own argument — but the definition is vague, 
+                     overlapping with those of a paper, an article, a pamphlet
+                     , and a short story. Essays have traditionally been 
+                     sub-classified as formal and informal. Formal essays are
+                     characterized by "serious purpose, dignity, logical organization,
+                      length," whereas the informal essay is characterized by
+                     "the personal element (self-revelation, individual tastes 
+                    and experiences, confidential manner), humor, graceful style,
+                     rambling structure, unconventionality or novelty of theme,"
+            </div>
+        </div>
+        <div id="rightcolumn">
+            <div class="innertext">
+                    <b>Right Column:230px</b><br />
+                    An essay is, generally, a piece of writing that gives
+                    the author's own argument — but the definition is vague, 
+                     overlapping with those of a paper, an article, a pamphlet
+                     , and a short story. Essays have traditionally been 
+                     sub-classified as formal and informal. Formal essays are
+                     characterized by "serious purpose, dignity, logical organization,
+                      length," whereas the informal essay is characterized by
+                     "the personal element (self-revelation, individual tastes 
+                    and experiences, confidential manner), humor, graceful style,
+                     rambling structure, unconventionality or novelty of theme,"   
+            </div>
+        </div>
+        <div id="footer"> Footer</div>
+    </div>
+</body>
+</html>
